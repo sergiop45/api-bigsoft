@@ -8,7 +8,7 @@ route.post('/post', async (req, res) => {
 
     const post = req.body;
 
-    await ModelVaga.create(post)
+    await ModelPost.create(post)
     .then(() => {
         res.status(201).json({message: 'Post registrado com sucesso!'});
     })
@@ -98,7 +98,7 @@ route.patch('/post/:id', VerifyJwt, async (req, res) => {
         
         const postupdate = req.body;
         const id = req.params.id;
-        const post = await ModelVaga.findById(id);
+        const post = await ModelPost.findById(id);
 
         if(post != undefined){
 
