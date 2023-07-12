@@ -11,7 +11,10 @@ const ModelPost = new mongoose.Schema({
                   required: true   
                  },
     author: String,
+    image: String,
+
     },
+    
     {
         timestamps: true
     }
