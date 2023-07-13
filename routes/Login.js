@@ -20,7 +20,7 @@ route.post('/login', async(req, res) => {
             const id = user._id;
             const secret = process.env.MY_SECRET;
             const token = jwt.sign({ id }, secret, {
-                expiresIn: 300
+                expiresIn: 3600
             });
 
             res.status(200).json({auth: true, token: token});

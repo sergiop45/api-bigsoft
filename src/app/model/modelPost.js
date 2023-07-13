@@ -12,7 +12,10 @@ const ModelPost = new mongoose.Schema({
                  },
     author: String,
     image: String,
-
+    category:   {
+                type: String,
+                required: true 
+                }               
     },
     
     {
